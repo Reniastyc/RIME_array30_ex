@@ -52,7 +52,7 @@ engine:
     - uniquifier
 
 speller:
-  alphabet: abcdefghjiklmnopqrstuvwxyz;,./
+  alphabet: "abcdefghjiklmnopqrstuvwxyz;,./"
   delimiter: " '"
 
 translator:
@@ -115,7 +115,8 @@ key_binder:
     - { when: has_menu, accept: period, send: period }
 
 recognizer:
-  import_preset: default
   patterns:
-    punct: '^/([0-9]0?|[A-Za-z]+)$'
+    email: "^[a-z][-_.0-9a-z]*@.*$"
+    uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
+    url: "^(www[.]|https?:|ftp:|mailto:).*$"
     reverse_lookup: "`[a-z]*'?$"
