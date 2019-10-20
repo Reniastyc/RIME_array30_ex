@@ -15,6 +15,24 @@ use_preset_vocabulary: true
 max_phrase_length: 1
 ...
 
+# encoding: utf-8
+# 三十行列
+# 
+# Jiehong Ma <ma.jiehong@gmail.com>
+# 天道玄虛 <reniastyc.de.em@gmail.com> 修改版
+# 移除了所有罕用字指示符「I」
+# 移除了字庫的後半部分
+# 將四碼偏旁修改爲單碼
+# 移除了特別碼
+
+---
+name: "array30_ex"
+version: "0.21ex"
+sort: original
+use_preset_vocabulary: true
+max_phrase_length: 1
+...
+
 ，	,
 火	,
 米	,
@@ -334,7 +352,6 @@ max_phrase_length: 1
 焔	,jdp
 粣	,jf
 㶲	,jf
-籾	,jh
 籾	,jh
 焵	,jid
 焹	,jis
@@ -1298,7 +1315,6 @@ max_phrase_length: 1
 御	.ofj
 遙	.ofn
 遥	.ofn
-遥	.ofn
 颻	.ofx
 繇	.ofx
 獡	.og,
@@ -1471,9 +1487,7 @@ max_phrase_length: 1
 躰	.va
 弒	.vax
 弑	.vax
-弑	.vax
 剎	.ve
-刹	.ve
 刹	.ve
 閷	.vek
 殺	.vhb
@@ -1605,10 +1619,10 @@ max_phrase_length: 1
 郩	.zut
 㕁	.zxj
 郄	.zxt
-四	/
-虫	/
 、	/
 ／	/
+四	/
+虫	/
 罒	/
 䍘	/,
 䗊	/,,
@@ -2235,9 +2249,8 @@ max_phrase_length: 1
 蛕	/zu
 蜟	/zu
 䍔	/zx
-口	;
-：	;
 ；	;
+口	;
 〇	;
 咪	;,
 吙	;,
@@ -2335,7 +2348,6 @@ max_phrase_length: 1
 㓸	;;ee
 斲	;;eo
 罵	;;g,
-駡	;;g,
 駡	;;g,
 骂	;;ga
 喌	;;hd
@@ -2465,8 +2477,6 @@ max_phrase_length: 1
 嚁	;bby
 囑	;bc/
 啒	;bdd
-別	;be
-别	;be
 别	;be
 啹	;bf;
 噊	;bg;
@@ -3069,7 +3079,6 @@ max_phrase_length: 1
 咝	;ssa
 哚	;sv
 呣	;sz
-啲	;t
 嘨	;t,d
 喡	;t;q
 㖨	;tc
@@ -3404,7 +3413,6 @@ max_phrase_length: 1
 㫄	aalh
 貳	aamx
 貮	aamx
-貮	aamx
 忈	aan
 㦱	aarx
 元	aas
@@ -3525,7 +3533,6 @@ max_phrase_length: 1
 聧	aebz
 聉	aedd
 刵	aee
-耻	aee
 耻	aee
 䎴	aefd
 聴	aefn
@@ -3914,7 +3921,6 @@ max_phrase_length: 1
 殱	amrx
 歿	amsb
 殁	amsb
-殁	amsb
 㱟	amtb
 殔	amtc
 肂	amtf
@@ -4074,7 +4080,6 @@ max_phrase_length: 1
 醒	appr
 醞	appu
 醖	appu
-醖	appu
 醲	appx
 䣥	apq
 䣨	apq
@@ -4155,7 +4160,6 @@ max_phrase_length: 1
 琋	ar.d
 琤	ar.d
 瑤	ar.d
-瑶	ar.d
 瑶	ar.d
 琈	ar.f
 琒	ar.f
@@ -5511,7 +5515,6 @@ max_phrase_length: 1
 㴸	cek
 闊	cel;
 濶	cel;
-濶	cel;
 灁	celc
 滹	celi
 潤	celr
@@ -6230,7 +6233,6 @@ max_phrase_length: 1
 溫	cpu
 渭	cpu
 温	cpu
-温	cpu
 涃	cpv
 淉	cpv
 洩	cpx
@@ -6276,7 +6278,6 @@ max_phrase_length: 1
 㴂	cqjr
 㳩	cqjy
 匯	cqky
-滙	cqky
 滙	cqky
 鴻	cql,
 鸿	cqla
@@ -6382,7 +6383,6 @@ max_phrase_length: 1
 㵯	csa,
 洬	csam
 沒	csb
-没	csb
 没	csb
 汛	csf
 汎	csh
@@ -10039,9 +10039,7 @@ max_phrase_length: 1
 䮞	g,zp
 䮅	g,zx
 䂚	g..
-啟	g.;
 硌	g.;
-啓	g.;
 啓	g.;
 丒	g.a
 磃	g.es
@@ -12713,7 +12711,6 @@ max_phrase_length: 1
 嵞	ivdd
 敘	iveb
 敍	iveb
-敍	iveb
 鉥	ivh
 厁	ivhd
 斜	ivhf
@@ -12757,7 +12754,6 @@ max_phrase_length: 1
 鐑	ixr;
 鈗	ixs
 玆	ixx
-兹	ixx
 兹	ixx
 鶿	ixx,
 鷀	ixx,
@@ -12928,7 +12924,6 @@ max_phrase_length: 1
 韏	iztq
 卷	izts
 巻	izts
-巻	izts
 銪	izu
 錥	izu
 铕	izu
@@ -13040,7 +13035,6 @@ max_phrase_length: 1
 冃	jaa
 冄	jaa
 冢	jaa.
-冡	jaa.
 冡	jaa.
 黽	jaaa
 冦	jaab
@@ -13327,11 +13321,9 @@ max_phrase_length: 1
 睌	jj;s
 冊	jja
 册	jja
-册	jja
 龜	jja.
 龜	jjaa
 刪	jjae
-删	jjae
 删	jjae
 䶰	jjaq
 龜	jjas
@@ -13861,7 +13853,6 @@ max_phrase_length: 1
 俘	k.gf
 佟	k.h
 仪	k.h
-仪	k.h
 儍	k.h.
 爷	k.j
 僾	k.j.
@@ -14376,7 +14367,6 @@ max_phrase_length: 1
 㒊	kjhe
 次	kjk
 仞	kjk
-仭	kjk
 仭	kjk
 㐸	kjk
 㐻	kjk
@@ -15233,7 +15223,6 @@ max_phrase_length: 1
 衆	l/.
 簚	l/ax
 䉚	l/jh
-眾	l/kk
 衆	l/kk
 箩	l/m
 簤	l/m
@@ -15270,7 +15259,6 @@ max_phrase_length: 1
 篔	l;m
 筼	l;m
 夠	l;mm
-够	l;mm
 够	l;mm
 㙑	l;mr
 鄅	l;mt
@@ -16069,7 +16057,6 @@ max_phrase_length: 1
 皒	lplx
 囪	lpm
 囱	lpm
-囱	lpm
 䇱	lpm
 悤	lpmn
 迫	lpn
@@ -16269,7 +16256,6 @@ max_phrase_length: 1
 䉈	lru.
 丟	lrx
 丢	lrx
-丢	lrx
 篕	lrxu
 㔩	lrxu
 九	ls
@@ -16335,7 +16321,6 @@ max_phrase_length: 1
 血	lu
 笽	lu
 䉳	lu,f
-眾	lu.
 衆	lu.
 衉	lu.;
 衇	lu.k
@@ -16874,7 +16859,6 @@ max_phrase_length: 1
 夭	lz
 蚕	lz/
 吞	lz;
-呑	lz;
 呑	lz;
 鷮	lz;,
 敿	lz;.
@@ -18133,7 +18117,6 @@ max_phrase_length: 1
 鄽	nprt
 慍	npu
 愠	npu
-愠	npu
 㥜	npu
 悃	npv
 惈	npv
@@ -18633,7 +18616,6 @@ max_phrase_length: 1
 搯	o.o
 搖	o.od
 摇	o.od
-摇	o.od
 挀	o.ok
 㧨	o.q
 拠	o.s
@@ -18851,7 +18833,6 @@ max_phrase_length: 1
 攩	ocj,
 撐	ocjl
 撐	ocjo
-撑	ocjo
 撑	ocjo
 擋	ocjp
 摚	ocjr
@@ -19362,10 +19343,8 @@ max_phrase_length: 1
 㩳	okyb
 攜	okyd
 擕	okyd
-擕	okyd
 㔼	okyf
 攜	okyg
-携	okyg
 携	okyg
 携	okyl
 擒	okym
@@ -19684,7 +19663,6 @@ max_phrase_length: 1
 捑	opsz
 氳	opu
 氲	opu
-氲	opu
 揾	opu
 㩎	opuh
 擝	opuu
@@ -19740,7 +19718,6 @@ max_phrase_length: 1
 批	oqq
 揩	oqqp
 毀	oqsb
-毁	oqsb
 毁	oqsb
 䥣	oqsi
 㩓	oqso
@@ -20137,7 +20114,6 @@ max_phrase_length: 1
 㦛	ozan
 舉	ozao
 擧	ozao
-擧	ozao
 轝	ozaq
 㐦	ozas
 振	ozax
@@ -20511,7 +20487,6 @@ max_phrase_length: 1
 豑	peql
 艷	peqs
 艶	peqs
-艶	peqs
 鄷	peqt
 豔	pequ
 豓	pequ
@@ -20562,7 +20537,6 @@ max_phrase_length: 1
 豊	pfqi
 豑	pfql
 艷	pfqs
-艶	pfqs
 艶	pfqs
 鄷	pfqt
 豔	pfqu
@@ -23383,7 +23357,6 @@ max_phrase_length: 1
 踘	sl,
 鳳	sl,
 鳯	sl,
-鳯	sl,
 蹯	sl,p
 虱	sl/
 跔	sl;
@@ -23638,7 +23611,6 @@ max_phrase_length: 1
 䟲	szs
 跠	sztg
 袰	szyx
-的	t
 彐	t
 阝	t
 灵	t,
@@ -23646,7 +23618,6 @@ max_phrase_length: 1
 粛	t,dd
 彛	t,kf
 鄰	t,mq
-隣	t,mq
 隣	t,mq
 彝	t,xf
 彞	t,xf
@@ -23832,7 +23803,6 @@ max_phrase_length: 1
 弧	tg.k
 彋	tg/x
 強	tg;/
-强	tg;/
 强	tg;/
 勥	tg;b
 彈	tg;f
@@ -24690,7 +24660,6 @@ max_phrase_length: 1
 鳛	uabp
 縣	uac
 県	uac
-県	uac
 懸	uacn
 䲤	uacp
 縣	uacx
@@ -24734,7 +24703,6 @@ max_phrase_length: 1
 鴡	ual,
 鳈	ualc
 胹	uale
-腼	uale
 腼	uale
 鳤	uale
 脜	ualj
@@ -25892,7 +25860,6 @@ max_phrase_length: 1
 櫷	vjj.
 柵	vjja
 栅	vjja
-栅	vjja
 櫷	vjja
 欔	vjjb
 檞	vjjf
@@ -26735,7 +26702,6 @@ max_phrase_length: 1
 椷	vzqx
 櫥	vzrh
 櫉	vzrh
-櫉	vzrh
 楏	vzrr
 欛	vzru
 㮷	vzsp
@@ -26759,7 +26725,6 @@ max_phrase_length: 1
 嫾	w,mq
 㜆	w,n
 彝	w,xf
-彞	w,xf
 彞	w,xf
 彖	w.
 㛛	w.
@@ -27047,7 +27012,6 @@ max_phrase_length: 1
 䶯	wjj.
 姍	wjja
 姗	wjja
-姗	wjja
 䶯	wjja
 嫓	wjjq
 䶯	wjjs
@@ -27250,7 +27214,6 @@ max_phrase_length: 1
 䣎	wpt
 媼	wpu
 媦	wpu
-媪	wpu
 媪	wpu
 巢	wpv
 婐	wpv
@@ -27981,7 +27944,6 @@ max_phrase_length: 1
 墏	xmfr
 槳	xmfv
 獎	xmfz
-奬	xmfz
 奬	xmfz
 纓	xmmw
 缨	xmmw
@@ -29172,7 +29134,6 @@ max_phrase_length: 1
 䴔	yk.a
 褑	yk.b
 効	yk.b
-効	yk.b
 㿰	yk.b
 褷	yk.c
 䙕	yk.c
@@ -29691,7 +29652,6 @@ max_phrase_length: 1
 诰	yo;
 褒	yo;x
 襃	yo;x
-襃	yo;x
 䛡	yoa;
 詆	yoaa
 诋	yoaa
@@ -29755,7 +29715,6 @@ max_phrase_length: 1
 勯	yp;b
 皽	yp;b
 稟	yp;c
-禀	yp;c
 禀	yp;c
 㔊	yp;e
 韻	yp;m
@@ -30513,7 +30472,6 @@ max_phrase_length: 1
 䲹	zal,
 廈	zal.
 厦	zal.
-厦	zal.
 励	zalb
 需	zale
 奤	zale
@@ -30942,7 +30900,6 @@ max_phrase_length: 1
 㕏	zqif
 廚	zqih
 厨	zqih
-厨	zqih
 厧	zqjk
 䫲	zqnm
 感	zqnx
@@ -31102,7 +31059,6 @@ max_phrase_length: 1
 霭	zyps
 靇	zyuq
 龐	zyuq
-龎	zyuq
 龎	zyuq
 霎	zyw
 奒	zyxk

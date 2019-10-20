@@ -3,22 +3,23 @@
 
 schema:
   schema_id: array30_ex
-  name: "行列三十修改版"
-  version: "0.20"
+  name: "行列改"
+  version: "0.21"
   author:
     - 發明人 廖明德先生
     - Jiehong Ma <ma.jiehong@gmail.com>
     - 天道玄虛 <reniastyc.de.em@gmail.com> 修改
   description: |
-    行列輸入法
+    行列三十輸入法
     http://www.array.com.tw/
-    移除了罕用字指示符並調整了字庫
+    移除了罕用字指示符
+    依據正黑體調整了字庫
   dependencies:
     - luna_pinyin
 
 switches:
   - name: ascii_mode
-    reset: 1
+    reset: 0
     states: [ 中文, 西文 ]
   - name: full_shape
     states: [ 半角, 全角 ]
@@ -57,7 +58,7 @@ speller:
 
 translator:
   dictionary: array30_ex
-  enable_sentence: false
+  enable_sentence: true
   disable_user_dict_for_patterns:
     - "^.$"  # 單碼不調頻
   preedit_format: &format
