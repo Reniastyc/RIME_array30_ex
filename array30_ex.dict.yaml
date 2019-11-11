@@ -7,16 +7,16 @@
 # 移除了字庫的後半部分
 # 將四碼偏旁修改爲單碼
 # 移除了特別碼
+# 可用首尾碼取代全碼，同時支持詞組輸入
 
 ---
 name: "array30_ex"
-version: "0.21ex"
-sort: original
+version: "0.30"
+sort: by_weight
 use_preset_vocabulary: true
-max_phrase_length: 1
 ...
 
-，	,
+，	,	99999999
 火	,
 米	,
 灬	,
@@ -768,7 +768,7 @@ max_phrase_length: 1
 烠	,zu
 焴	,zu
 㸇	,zzm
-。	.
+。	.	99999999
 身	.
 乂	.
 彳	.
@@ -1602,7 +1602,7 @@ max_phrase_length: 1
 郩	.zut
 㕁	.zxj
 郄	.zxt
-、	/
+、	/	99999999
 ／	/
 四	/
 虫	/
@@ -2232,7 +2232,7 @@ max_phrase_length: 1
 蛕	/zu
 蜟	/zu
 䍔	/zx
-；	;
+；	;	99999999
 口	;
 〇	;
 咪	;,

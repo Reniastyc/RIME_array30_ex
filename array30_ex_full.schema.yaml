@@ -1,21 +1,30 @@
 # Rime schema settings
 # encoding: utf-8
+# 行列改
+# 
+# Jiehong Ma <ma.jiehong@gmail.com>
+# 天道玄虛 <reniastyc.de.em@gmail.com> 修改版
+# 移除了所有罕用字指示符「I」
+# 將前半部分的四碼偏旁修改爲單碼
+# 移除了特別碼
+# 可用首尾碼取代全碼，同時支持詞組輸入
 
 schema:
   schema_id: array30_ex_full
   name: "行列改全字庫"
-  version: "0.21"
+  version: "0.30ex"
   author:
-    - 發明人 廖明德先生
+    - 發明人：廖明德先生
     - Jiehong Ma <ma.jiehong@gmail.com>
-    - 天道玄虛 <reniastyc.de.em@gmail.com> 修改
+    - 修改者：天道玄虛 <reniastyc.de.em@gmail.com> 
   description: |
     行列三十輸入法
     http://www.array.com.tw/
     移除了罕用字指示符
     全字庫版本
+    可用首尾碼取代全碼，同時支持詞組輸入
   dependencies:
-    - luna_pinyin
+    - luna_quanpin
 
 switches:
   - name: ascii_mode
@@ -45,7 +54,7 @@ engine:
     - punct_segmentor
     - fallback_segmentor
   translators:
-    - table_translator
+    - script_translator
     - punct_translator
     - reverse_lookup_translator
   filters:
@@ -55,12 +64,11 @@ engine:
 speller:
   alphabet: abcdefghjiklmnopqrstuvwxyz;,./
   delimiter: " '"
+  algebra:
+   - derive/^(.).+(.)$/$1$2/ #增加了速成的特性，可用首尾碼取代全碼，同時支持詞組輸入
 
 translator:
   dictionary: array30_ex_full
-  enable_sentence: true
-  disable_user_dict_for_patterns:
-    - "^.$"  # 單碼不調頻
   preedit_format: &format
     - 'xform|q|1↑|'
     - 'xform|w|2↑|'
