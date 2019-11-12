@@ -68,8 +68,7 @@ speller:
   delimiter: " '"
   algebra:
    - derive/^(.).+(.)$/$1$2/
-   - derive/^(.)(.).+$/$1$2/
-  #首尾、首二簡碼
+  #首尾簡碼
 
 translator:
   dictionary: array30_ex_full
