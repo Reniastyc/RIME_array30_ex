@@ -5,15 +5,16 @@
 # Jiehong Ma <ma.jiehong@gmail.com>
 # 天道玄虛 <reniastyc.de.em@gmail.com> 修改版
 # 移除了所有罕用字指示符「I」
-# 移除了字庫的後半部分
+# 依據正黑體調整了字庫
 # 將四碼偏旁修改爲單碼
 # 移除了特別碼
-# 可用首尾碼取代全碼，同時支持詞組輸入
+# 支持詞組輸入，增加簡碼
+# 移除反查，增加符號輸入
 
 schema:
   schema_id: array30_ex
   name: "行列改"
-  version: "0.30"
+  version: "0.30ex"
   author:
     - 發明人：廖明德先生
     - Jiehong Ma <ma.jiehong@gmail.com>
@@ -23,7 +24,8 @@ schema:
     http://www.array.com.tw/
     移除了罕用字指示符
     依據正黑體調整了字庫
-    可用首尾碼取代全碼，同時支持詞組輸入
+    支持詞組輸入
+    簡碼規則支持：首尾碼、首二碼
   dependencies:
     - luna_quanpin
 
@@ -64,12 +66,16 @@ engine:
 
 speller:
   alphabet: "abcdefghjiklmnopqrstuvwxyz;,./"
-  delimiter: " '"
+  delimiter: " '" 
   algebra:
-   - derive/^(.).+(.)$/$1$2/ #增加了速成的特性，可用首尾碼取代全碼，同時支持詞組輸入
+   - derive/^(.).+(.)$/$1$2/
+   - derive/^(.)(.).+$/$1$2/
+  #首尾、首二簡碼
 
 translator:
   dictionary: array30_ex
+  disable_user_dict_for_patterns:
+    - "^[;,./]$"
   preedit_format: &format
     - 'xform|q|1↑|'
     - 'xform|w|2↑|'
@@ -103,20 +109,8 @@ translator:
     - 'xform|/|0↓|'
   comment_format: *format
 
-reverse_lookup:
-  dictionary: luna_pinyin
-  prism: luna_quanpin
-  prefix: "`"
-  suffix: "'"
-  tips: 〔拼音〕
-  preedit_format:
-    - xform/([nl])v/$1ü/
-    - xform/([nl])ue/$1üe/
-    - xform/([jqxy])v/$1u/
-  comment_format: *format
-
 punctuator:
-  import_preset: default
+  import_preset: symbols
 
 key_binder:
   import_preset: default
@@ -129,4 +123,5 @@ recognizer:
     email: "^[a-z][-_.0-9a-z]*@.*$"
     uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
     url: "^(www[.]|https?:|ftp:|mailto:).*$"
+    punct: '^/([0-9]0?|[A-Za-z]+)$'
     reverse_lookup: "`[a-z]*'?$"

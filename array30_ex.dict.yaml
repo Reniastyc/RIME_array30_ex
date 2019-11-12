@@ -1,5 +1,5 @@
 # encoding: utf-8
-# 三十行列
+# 行列改
 # 
 # Jiehong Ma <ma.jiehong@gmail.com>
 # 天道玄虛 <reniastyc.de.em@gmail.com> 修改版
@@ -7,16 +7,17 @@
 # 移除了字庫的後半部分
 # 將四碼偏旁修改爲單碼
 # 移除了特別碼
-# 可用首尾碼取代全碼，同時支持詞組輸入
+# 支持詞組輸入，增加簡碼
+# 移除反查，增加符號輸入
 
 ---
 name: "array30_ex"
-version: "0.30"
-sort: by_weight
+version: "0.30ex"
+sort: original
 use_preset_vocabulary: true
 ...
 
-，	,	99999999
+，	,
 火	,
 米	,
 灬	,
@@ -768,7 +769,7 @@ use_preset_vocabulary: true
 烠	,zu
 焴	,zu
 㸇	,zzm
-。	.	99999999
+。	.
 身	.
 乂	.
 彳	.
@@ -1602,7 +1603,7 @@ use_preset_vocabulary: true
 郩	.zut
 㕁	.zxj
 郄	.zxt
-、	/	99999999
+、	/
 ／	/
 四	/
 虫	/
@@ -2232,7 +2233,7 @@ use_preset_vocabulary: true
 蛕	/zu
 蜟	/zu
 䍔	/zx
-；	;	99999999
+；	;
 口	;
 〇	;
 咪	;,
