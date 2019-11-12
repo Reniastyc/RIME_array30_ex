@@ -25,7 +25,6 @@ schema:
     移除了罕用字指示符
     依據正黑體調整了字庫
     支持詞組輸入
-    簡碼規則支持：首尾碼、首二碼
   dependencies:
     - luna_quanpin
 
@@ -67,9 +66,6 @@ engine:
 speller:
   alphabet: "abcdefghjiklmnopqrstuvwxyz;,./"
   delimiter: " '" 
-  algebra:
-   - derive/^(.).+(.)$/$1$2/
-  #首尾簡碼
 
 translator:
   dictionary: array30_ex
@@ -106,6 +102,18 @@ translator:
     - 'xform|,|8↓|'
     - 'xform|\.|9↓|'
     - 'xform|/|0↓|'
+  comment_format: *format
+
+reverse_lookup:
+  dictionary: luna_pinyin
+  prism: luna_quanpin
+  prefix: "`"
+  suffix: "'"
+  tips: 〔拼音〕
+  preedit_format:
+    - xform/([nl])v/$1ü/
+    - xform/([nl])ue/$1üe/
+    - xform/([jqxy])v/$1u/
   comment_format: *format
 
 punctuator:
