@@ -8,23 +8,20 @@
 # 依據正黑體調整了字庫
 # 將四碼偏旁修改爲單碼
 # 移除了特別碼
-# 支持詞組輸入，增加簡碼
-# 移除反查，增加符號輸入
+# 支持詞組輸入，組詞時可用首尾碼代替全碼
 
 schema:
   schema_id: array30_ex
   name: "行列改"
-  version: "0.30ex"
+  version: "0.35ex"
   author:
     - 發明人：廖明德先生
     - Jiehong Ma <ma.jiehong@gmail.com>
     - 修改者：天道玄虛 <reniastyc.de.em@gmail.com> 
   description: |
-    行列三十輸入法
+    行列三十輸入法，天道玄虛修改版
     http://www.array.com.tw/
-    移除了罕用字指示符
-    依據正黑體調整了字庫
-    支持詞組輸入
+    常用字庫版本
   dependencies:
     - luna_quanpin
 
@@ -66,11 +63,15 @@ engine:
 speller:
   alphabet: "abcdefghjiklmnopqrstuvwxyz;,./"
   delimiter: " '" 
+  algebra:
+   - fuzz/^(.).+(.)$/$1$2/
+  #首尾簡碼
 
 translator:
   dictionary: array30_ex
-  disable_user_dict_for_patterns:
-    - "^[;,./]$"
+  strict_spelling: true #簡碼僅用於組詞
+  disable_user_dict_for_patterns: 
+    - "^[;,./]$" #符號鍵單碼不調頻
   preedit_format: &format
     - 'xform|q|1↑|'
     - 'xform|w|2↑|'

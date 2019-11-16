@@ -4,14 +4,12 @@
 # Jiehong Ma <ma.jiehong@gmail.com>
 # 天道玄虛 <reniastyc.de.em@gmail.com> 修改版
 # 移除了所有罕用字指示符「I」
-# 移除了字庫的後半部分
-# 將四碼偏旁修改爲單碼
-# 移除了特別碼
-# 支持詞組輸入，增加簡碼
-# 移除反查，增加符號輸入
+# 將四碼偏旁修改爲單碼竝移除了特別碼
+# 依據正黑體調整了字庫
+# 支持詞組輸入，組詞時可用首尾碼代替全碼
 
 ---
-name: "array30_ex"
+name: "array30_ex_full"
 version: "0.30ex"
 sort: original
 use_preset_vocabulary: true
@@ -31076,3 +31074,42 @@ use_preset_vocabulary: true
 厖	zzsh
 䨑	zztg
 䨖	zzu
+𥻗	,vpa
+𠳐	;ft
+𤫉	ar,b
+𤩽	arfh
+𤫉	aryb
+𤧛	aryd
+𣲗	caad
+𣲘	cazs
+𣸣	cffm
+𣲗	cfg
+𦭜	f;k
+𨙸	fbt
+𦰡	fgft
+𦰡	fgzt
+𥔲	g;;g
+𥖨	g;;v
+𠙶	gdd
+𥕢	gqp
+𨱇	if,h
+𨱏	ifi;
+𨱔	iiph
+𨱑	irpk
+𨟠	jjkt
+𨐈	qfcs
+𡎚	rgjf
+𡐓	rntc
+𧿹	ssz
+𨺙	tos
+𦝼	u,w
+𩾃	uajs
+𩾌	uanc
+𩽾	uanw
+𦙶	uf;
+𣗋	vcjs
+𨚕	xft
+𦈡	xzae
+𨭉	y.ai
+𠅤	ypn
+𦒍	yprb
