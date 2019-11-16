@@ -9,7 +9,7 @@
 # 支持詞組輸入，組詞時可用首尾碼代替全碼
 
 ---
-name: "array30_ex_full"
+name: "array30_ex"
 version: "0.30ex"
 sort: original
 use_preset_vocabulary: true
