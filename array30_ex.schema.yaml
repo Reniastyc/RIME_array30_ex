@@ -5,15 +5,14 @@
 # Jiehong Ma <ma.jiehong@gmail.com>
 # 天道玄虛 <reniastyc.de.em@gmail.com> 修改版
 # 移除了所有罕用字指示符「I」
-# 依據正黑體調整了字庫
-# 將四碼偏旁修改爲單碼
+# 將前半部分的四碼偏旁修改爲單碼
 # 移除了特別碼
 # 支持詞組輸入，組詞時可用首尾碼代替全碼
 
 schema:
   schema_id: array30_ex
   name: "行列改"
-  version: "0.35ex"
+  version: "0.5ex"
   author:
     - 發明人：廖明德先生
     - Jiehong Ma <ma.jiehong@gmail.com>
@@ -21,7 +20,6 @@ schema:
   description: |
     行列三十輸入法，天道玄虛修改版
     http://www.array.com.tw/
-    常用字庫版本
   dependencies:
     - luna_quanpin
 
@@ -31,10 +29,12 @@ switches:
     states: [ 中文, 西文 ]
   - name: full_shape
     states: [ 半角, 全角 ]
-  - name: simplification
-    states: [ 漢字, 汉字 ]
   - name: ascii_punct
-    states: [ 。，, ．， ]
+  - options: [ zh_all, zh_trad, zh_simp ]
+    states:
+      - 不轉換
+      - 傳統字
+      - 簡化字
 
 engine:
   processors:
@@ -53,19 +53,31 @@ engine:
     - punct_segmentor
     - fallback_segmentor
   translators:
-    - script_translator
     - punct_translator
+    - table_translator@custom_phrase
     - reverse_lookup_translator
+    - script_translator
   filters:
     - simplifier
+    - simplifier@tradional
     - uniquifier
+
+simplifier:
+  option_name: zh_simp
+  opencc_config: t2s.json
+
+tradional:
+  option_name: zh_trad
+  opencc_config: s2t.json
 
 speller:
   alphabet: "abcdefghjiklmnopqrstuvwxyz;,./"
   delimiter: " '" 
   algebra:
-   - fuzz/^(.).+(.)$/$1$2/
-  #首尾簡碼
+   - fuzz/^(.).+(.)$/$1$2/ #首尾簡碼
+
+menu:
+  page_size: 10
 
 translator:
   dictionary: array30_ex
@@ -104,6 +116,14 @@ translator:
     - 'xform|\.|9↓|'
     - 'xform|/|0↓|'
   comment_format: *format
+
+custom_phrase:
+  dictionary: ""
+  user_dict: custom_phrase
+  db_class: stabledb
+  enable_completion: false
+  enable_sentence: false
+  initial_quality: 1
 
 reverse_lookup:
   dictionary: luna_pinyin
